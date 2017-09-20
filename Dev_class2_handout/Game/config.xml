@@ -5,5 +5,8 @@
   <config>
 
     <name>XML game</name>
+    <width>1920</width>
+    <heigth>1080</width>
+	
     
   </config>

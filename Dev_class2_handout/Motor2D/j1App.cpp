@@ -66,11 +66,13 @@ bool j1App::Awake()
 	if (result)
 	{
 		LOG("Loaded XML file without errors");
-		config_node = config_doc.child("name");
-		LOG("Game name: %s", config_node.value());
 	}
 	else
 		LOG("Couldn't load XML file. Error description: %s", result.description());
+
+
+	config_node = config_doc.child("config");
+	int width = config_node.attribute("width").as_int();
 
 	bool ret = true;
 
